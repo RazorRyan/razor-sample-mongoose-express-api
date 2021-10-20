@@ -49,6 +49,10 @@ router.patch("/employees/:id", async (req, res) => {
       result.employeeStartDate = req.body.employeeStartDate;
     }
 
+    if (req.body.employeeEndDate) {
+      result.employeeEndDate = req.body.employeeEndDate;
+    }
+
     await result.save();
     res.send(result);
   } catch {
