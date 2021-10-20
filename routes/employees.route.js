@@ -13,6 +13,7 @@ router.post("/employees", async (req, res) => {
     employeeName: req.body.employeeName,
     employeeTitle: req.body.employeeTitle, 
     employeeStartDate: req.body.employeeStartDate,
+    employeeEndDate: req.body.employeeEndDate,
   });
   await request.save();
   res.send(request);
