@@ -1,0 +1,115 @@
+// const swaggerUi = require("swagger-ui-express");
+// //const swaggerDocument = require('./swagger.json');
+// const swaggerJSDoc = require("swagger-jsdoc");
+
+// const swaggerDefinition = {
+//   openapi: "3.0.0",
+//   info: {
+//     title: 'Express API for JSONPlaceholder',
+//     version: '1.0.0',
+//     description:
+//       'This is a REST API application made with Express. It retrieves data from JSONPlaceholder.',
+//     license: {
+//       name: 'Licensed Under MIT',
+//       url: 'https://spdx.org/licenses/MIT.html',
+//     },
+//     contact: {
+//       name: 'JSONPlaceholder',
+//       url: 'https://jsonplaceholder.typicode.com',
+//     },
+//   },
+//   servers: [
+//     {
+//       url: 'http://localhost:3000',
+//       description: 'Development server',
+//     },
+//   ],
+// };
+
+// const options = {
+//   swaggerDefinition,
+//   // Paths to files containing OpenAPI definitions
+//   apis: ["./routes/*.js"],
+// };
+// const swaggerSpec = swaggerJSDoc(options);
+
+
+  // app.use(
+    //   "/api-docs",
+    //   swaggerUi.serve,
+    //   swaggerUi.setup(swaggerSpec, { explorer: true })
+    // );
+
+
+
+    /**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         data:
+ *           type: array
+ *           items:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: integer
+ *                 description: The id.
+ *                 example: 0
+ *               username:
+ *                 type: string
+ *                 description: The user's name.
+ *                 example: Razor
+ *               password:
+ *                 type: string
+ *                 description: The user's password.
+ *                 example: Pssadd122321!!
+ */
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     summary: Retrieve a list users.
+ *     description: Retrieve a list of users.
+ *     responses:
+ *       200:
+ *         description: A list of users.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/User'
+ */
+
+
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Create a user.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *              items:
+ *                $ref: '#/components/schemas/User'
+ *     responses:
+ *       200:
+ *         description: A list of users.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/User'
+*/
