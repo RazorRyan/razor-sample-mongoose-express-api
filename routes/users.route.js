@@ -10,7 +10,7 @@ router.get("/users", async (req, res) => {
 router.post("/users", async (req, res) => {
   const request = new User({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
   });
   await request.save();
   res.send(request);

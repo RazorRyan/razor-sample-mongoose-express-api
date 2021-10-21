@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const postRoutes = require("./routes/posts.routes");
 const usersRoutes = require("./routes/users.route");
 const employeesRoutes = require("./routes/employees.route");
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 mongoose
   .connect(

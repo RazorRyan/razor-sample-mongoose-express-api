@@ -16,6 +16,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "swagger-jsdoc": "5.0.1",
+    "swagger-ui-express": "^4.1.6"
   }
 }
